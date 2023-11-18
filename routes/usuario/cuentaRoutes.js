@@ -16,7 +16,7 @@ const { crearCuenta,
 
 
 router.get('/',crearCuenta);
-router.get('/show',showUsers)
+router.get('/show', showUsers);
 router.post('/new',nuevaCuenta);
 router.put('/update', actualizarCuenta);
 router.delete('/delete', eliminarCuenta);

@@ -1,14 +1,7 @@
-
-const MongoClient = require("mongodb").MongoClient;
 const dotenv = require("dotenv");
+const clientes = require('../../models/usersModels');
+
 dotenv.config();
-const clientes= require('../../models/usersModels');
-const mongoose = require('mongoose');
-const path = require('path');
-const MONGO_URL_ATLAS= process.env.MONGO_URL_ATLAS;
-
-
-
 
 function crearCuenta(req,res){
     res.render('crearCuenta');

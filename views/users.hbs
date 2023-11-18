@@ -1,5 +1,5 @@
  
- <link rel="stylesheet" href="./css/style4.css">
+ <link rel="stylesheet" href="../css/style4.css">
 <body>
     <header>
         <div class="fijo">
@@ -14,16 +14,15 @@
 
            <div class="registrarse">
               
-            <a href="/cuenta">Crear cuenta</a>
+            <a href="/users">Crear cuenta</a>
                <a href="/loginAdmin">Login Administrador</a>
-               <a href="/users">iniciar sesión</a>
            </div>
            
          
            <nav>
             <div >
               <ul id="menu-horizontal">
-                  <li> <a href="./">Inicio</a></li>
+                  <li> <a href="/">Inicio</a></li>
                   <li><a href="/compra">Productos</a>
                   <ul id="menu-vertical">
                    
@@ -44,29 +43,23 @@
 
 
 <div>
-    <a id="inicio" href="./">Inicio</a> 
+    <a id="inicio" href="/">Inicio</a> 
     <p class="Login">/Mi Cuenta/<stong>Cerrar sesión</stong></p>
 </div>
    <br><br>
 
    <div id="formularioLogin">
-    <form action="/users/login" method="post">
-  
- 
+    <form>
         <label for="email">EMAIL<span>*</span>
             <input type="email" name="email" id="email">
-    
         </label>
         <label for="password">CONTRASEÑA<span>*</span>
             <input type="password" name="password" id="password">
-    
         </label>
-
-  
    <p>¿Olvidaste tu contraseña?</p>
    <br>
 
-   <button  id="loginSubmit" type="submit">INICIAR SESIÓN</button>
+   <button id="loginSubmit">INICIAR SESIÓN</button>
    <br><br>
    <div id="consultaCuenta">
     <p>¿No tienes cuenta?</p> <a href="/cuenta"><stong>Crear Cuenta</stong></a>
@@ -84,19 +77,23 @@
     </form>
 
     <div id="loading_form">
-        <img src="./assets/imagenes/loading.gif" alt="gif">
+        <img src="../assets/imagenes/loading.gif" alt="gif">
     </div>
 
 
 
    </div>
    
-  
+  <form id="form_redirect">
+    <input id="redirect_email" name="redirect_email" type="hidden" value="">
+    <input id="redirect_jwt" name="redirect_jwt" type="hidden" value="">
+    <input id="redirect_rol" name="redirect_rol" type="hidden" value="">
+  </form>
 
 
 
 
-        <script src="./js/codigo4.js"></script>
+        <script src="../js/codigo4.js"></script>
 
       
       

@@ -1,8 +1,5 @@
 
-
-
-
- $(document).ready(function(){
+$(document).ready(function(){
 
    $("#loginSubmit").click( async function (e) {
       e.preventDefault();
@@ -43,7 +40,7 @@
     let response = await crearUsuario(url, data);
 
     $("#loading_form ").hide();
-
+   console.log(response);
     if (response.error == true) {
        if (response.code == 1) {
          Swal.fire({
@@ -60,17 +57,28 @@
              text: 'Error al iniciar sesión.'
           });
        }
-    } else if(response.error == false) { 
-     // return res.sendFile(path.resolve('public/admin.html'));
+    } else if(response.error == false) {
       
-       Swal.fire({
-        position: 'center',
-          icon: 'success',
-          title: response.message,
-         showConfirmButton: false,
-          timer: 2500
-       });
-       //RESETEAR FORMULARIO Y COLORES VERDE DE LAS CLASES
+         Swal.fire({
+         position: 'center',
+            icon: 'success',
+            title: response.message,
+            showConfirmButton: false,
+            timer: 2500
+         });
+         //RESETEAR FORMULARIO Y COLORES VERDE DE LAS CLASES
+
+       //REENVIAR SEGUN QUE USUARIO ES
+       let form_redict = document.getElementById("form_redirect");
+       let redirect_email = form_redict.querySelector('#redirect_email');
+       let redirect_jwt = form_redict.querySelector('#redirect_jwt');
+       let redirect_rol = form_redict.querySelector('#redirect_rol');
+       redirect_email.value = response.data.email;
+       redirect_jwt.value = response.data.jsonToken;
+       redirect_rol.value = response.data.rol;
+       form_redict.action = "/users/redirect";
+       form_redict.method = "POST";
+       form_redict.submit();
       }
    
    })
@@ -81,7 +89,6 @@
 const validar = (input, expreg) => { 
 
    let resultado = expreg.test(input.value)  
-    console.log(input);
    
    if (!resultado) {
       input.classList.remove('inputSuccess');

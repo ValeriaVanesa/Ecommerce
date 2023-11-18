@@ -45,7 +45,7 @@ $(document).ready(function () {
 
       };
 
-      let url = '/cuenta/new';
+      let url = '/users/new';
 
       $("#loading_form ").show();
 
