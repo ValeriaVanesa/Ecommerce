@@ -1,0 +1,129 @@
+
+       <link rel="stylesheet" href="./css/style6.css">
+   <div>
+
+
+<body>
+
+
+    <header>
+        <div class="fijo">
+           <div class="envios">
+               <p>Envío gratis en compra superiores a $40.000</p> 
+        </div>
+       
+        <h1> <strong>Valmour</strong></h1>
+       </header>
+
+       <section>
+
+           <div class="registrarse">
+              
+               <a href="/cuenta">Crear cuenta</a> 
+               <a href="/users">Iniciar sesión</a>
+              
+           </div>
+           
+        
+           <nav>
+            <div >
+              <ul id="menu-horizontal">
+                  <li> <a href="/">Inicio</a></li>
+                  <li><a href="/compra">Productos</a>
+                  <ul id="menu-vertical">
+                    
+                      <li><a href="/calzados">Calzados</a></li>
+                      <li><a href="/perfumes">Perfumes</a></li>
+                  </ul>
+                  </li>
+
+
+           
+                  <li><a href="/contacto">Contacto</a></li>
+              </ul>
+             </div> 
+             
+           </nav>
+       </section>
+      
+
+      
+
+
+
+
+
+
+
+
+<br>
+    <a id="inicio" href="/">Inicio</a> 
+    <p class="indexContacto">/Registrase</p>
+
+
+
+    <h4>Crear nueva cuenta de cliente</h4>
+    <br><br><br>
+<div id="registrarse">
+    <div id="registro1">
+        <form action="/cuenta/new" method="post" class="form">
+            <h2>INFORMACIÓN PERSONAL</h2>
+            <br>
+        <label for="nombre">Nombre<span>*</span>
+            <input type="text" name="nombre" id="nombre" required>
+            
+        </label>
+        <br>
+        <label for="apellido">Apellido<span>*</span>
+            <input type="text" name="apellido" id="apellido" required>
+    
+        </label>
+       
+     
+        <br><br>
+        <label for="fecha">Fecha de nacimiento<span>*</span>
+            <input type="datetime-local" name="fechaNacimiento" id="fechaNacimiento" required>
+        </label>
+        <br>
+        <label for="dni">DNI<span>*</span>
+            <input type="text" name="dni" id="dni">
+    
+        </label>
+        <label for="email">EMAIL<span>*</span>
+            <input type="email" name="email" id="email">
+    
+        </label>
+        <label for="password">CONTRASEÑA<span>*</span>
+            <input type="password" name="password" id="password">
+    
+        </label>
+    
+        <button id="button2"type="submit">CREAR </button>
+    
+    
+    
+        </form>
+    </div>
+    
+ 
+        
+</div>
+<br><br><br>
+
+<div id="div_mensaje_enviando" >
+    <p>Iniciando sesión </p>
+</div>
+<div id="loading_form">
+    <img src="./assets/imagenes/loading.gif" alt="gif">
+</div>
+
+<br><br><br><br><br><br><br>
+    
+  
+
+<br><br>
+    <div class=logoWhatsapp>
+       <a href="#"><img src="./assets/imagenes/logo whatsapp fixed 2.png" alt="logo whatsapp"></a> 
+    </div> 
+
+<script src="./js/codigo6.js"></script>

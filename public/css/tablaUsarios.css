@@ -1,0 +1,23 @@
+.btn-guardar{
+width:100%;
+padding:15px;
+background-color:pink;
+border:0;
+box-sizing:border-box;
+cursor:pointer;
+font-weight:large;
+color:black;
+
+
+}
+
+.btn-guardar:hover,.btn-guardar:active{
+    color:white;
+    background-color: pink;
+    border-color:pink;
+
+}
+
+.btn-guardar:focus{
+    box-shadow: 0 0 0 3px rgba(121,82,179,0.25)
+}

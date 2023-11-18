@@ -1,0 +1,104 @@
+
+
+
+
+<link rel="stylesheet" href="./css/style3.css">
+
+<body>
+    <header>
+        <div class="fijo">
+           <div class="envios">
+         
+           </div>
+           <br>
+       
+           <h1> <strong>Valmour</strong></h1>
+</header>
+
+
+    <section>
+
+        <div class="registrarse">
+           
+              <a href="/loginAdmin">Login Administrador</a>
+           
+          
+        </div>
+        
+
+        <nav>
+           <div >
+             <ul id="menu-horizontal">
+                <li> <a href="/admin">Inicio</a></li>
+               <li><a href="/formProductos">RegistroProductos</a></li>
+                   <li><a href="/administracionUsuarios"> Registro Usuarios</a></li>
+                     <li><a href="/tablaUsuarios">Tabla Usuarios</a></li>
+                       <li><a href="/listaProductos"> Lista Productos</a></li>
+               
+             </ul>
+            </div> 
+            
+          </nav>
+           <br><br>
+          
+<h2>{{title}}</h2>
+<br><br>
+
+<div class="container m-5" >
+{{#each productos}}
+<div class="card" style="width: 18rem;">
+  <img src={{imagen}} class="card-img-top" alt="imagenes">
+  <div class="card-body">
+    <h5 class="card-title">{{nombre}} </h5>
+    <p class="card-text">{{precio}}  </p>
+    <form action="/eliminarProducto" method='post'>
+    <button type="submit" class="btn btn-danger">Eliminar</button> 
+    </form>
+ <form action="/actualizarProducto" method='post'>
+    <button type="submit" class="btn btn-primary">Actualizar</button> 
+    </form>
+  </div>
+
+</div>
+  {{/each}}
+</div>
+
+
+
+
+
+
+
+<table id="tablaUsuarios" class="table mt-4">
+<thead>
+    <tr>
+        <th style="display:none">ID</th>
+        <th>IMAGEN</th>
+        <th>NOMBRE</th>
+        <th>PRECIO</th>
+        <th>ACCIONES</th>
+
+
+    </tr>
+</thead>
+<tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</tbody>
+
+
+  </table>
+  
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>

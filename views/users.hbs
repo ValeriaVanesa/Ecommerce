@@ -1,0 +1,102 @@
+ 
+ <link rel="stylesheet" href="./css/style4.css">
+<body>
+    <header>
+        <div class="fijo">
+           <div class="envios">
+               <p>Envío gratis en compra superiores a $40.000</p> 
+        </div>
+       
+        <h1> <strong>Valmour</strong></h1>
+       </header>
+
+       <section>
+
+           <div class="registrarse">
+              
+            <a href="/cuenta">Crear cuenta</a>
+               <a href="/loginAdmin">Login Administrador</a>
+               <a href="/users">iniciar sesión</a>
+           </div>
+           
+         
+           <nav>
+            <div >
+              <ul id="menu-horizontal">
+                  <li> <a href="./">Inicio</a></li>
+                  <li><a href="/compra">Productos</a>
+                  <ul id="menu-vertical">
+                   
+                      <li><a href="/calzados">Calzados</a></li>
+                      <li><a href="/perfumes">Perfumes</a></li>
+                  </ul>
+                  </li>
+
+
+               
+                  <li><a href="/contacto">Contacto</a></li>
+              </ul>
+             </div> 
+             
+           </nav>
+       </section>
+       
+
+
+<div>
+    <a id="inicio" href="./">Inicio</a> 
+    <p class="Login">/Mi Cuenta/<stong>Cerrar sesión</stong></p>
+</div>
+   <br><br>
+
+   <div id="formularioLogin">
+    <form action="/users/login" method="post">
+  
+ 
+        <label for="email">EMAIL<span>*</span>
+            <input type="email" name="email" id="email">
+    
+        </label>
+        <label for="password">CONTRASEÑA<span>*</span>
+            <input type="password" name="password" id="password">
+    
+        </label>
+
+  
+   <p>¿Olvidaste tu contraseña?</p>
+   <br>
+
+   <button  id="loginSubmit" type="submit">INICIAR SESIÓN</button>
+   <br><br>
+   <div id="consultaCuenta">
+    <p>¿No tienes cuenta?</p> <a href="/cuenta"><stong>Crear Cuenta</stong></a>
+   </div>
+   
+   <div id="div_mensaje_enviando" >
+    <p>Iniciando sesión </p>
+</div>
+
+
+
+
+
+
+    </form>
+
+    <div id="loading_form">
+        <img src="./assets/imagenes/loading.gif" alt="gif">
+    </div>
+
+
+
+   </div>
+   
+  
+
+
+
+
+        <script src="./js/codigo4.js"></script>
+
+      
+      

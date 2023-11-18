@@ -1,0 +1,134 @@
+
+
+ <link rel="stylesheet" href="./css/style3.css">
+
+  <body>
+    <header>
+        <div class="fijo">
+           <div class="envios">
+         
+           </div>
+           <br>
+       
+           <h1> <strong>Valmour</strong></h1>
+</header>
+
+
+    <section>
+
+        <div class="registrarse">
+           
+              <a href="/loginAdmin">Login Administrador</a>
+           
+          
+        </div>
+        
+
+        <nav>
+           <div >
+             <ul id="menu-horizontal">
+                <li> <a href="/admin">Inicio</a></li>
+                     
+               <li><a href="/formProductos">RegistroProductos</a></li>
+                   <li><a href="/administracionUsuarios"> Registro Usuarios</a></li>
+                     <li><a href="/tablaUsuarios">Tabla Usuarios</a></li>
+                       <li><a href="/listaProductos"> Lista Productos</a></li>
+
+               
+             </ul>
+            </div> 
+            
+          </nav>
+           <br><br><br><br><br>
+          
+
+
+
+
+
+    </section>
+
+
+    <h2 id="tituloTablas">Informacion del Usuario</h2>
+<br>
+
+<div class = 'container'>
+    <div class="chadow-lg pb-3 mb-5 bg-body rounded">
+
+        <h2 id="datos">Datos </h2>
+<form action="/administracionUsuarios/crear" method = 'POST'>
+ 
+    <div class=" col-md-6">
+        <label for="nombre" class="form-label">NOMBRE</label>
+        <input id="nombre" name="nombre" type="text" class="form-control" required>
+    </div>
+
+    <div class=" col-md-6">
+        <label for="apellido" class="form-label">APELLIDO</label>
+        <input id="apellido" name="apellido" type="text" class="form-control" required>
+    </div>
+    <div class=" col-md-6">
+        <label for="fechaNacimiento" class="form-label">FECHA NACIMIENTO</label>
+        <input id="fechaNacimiento" name="fechaNacimiento" type="date" class="form-control" required>
+    </div>
+    <div class=" col-md-6">
+        <label for="dni" class="form-label">DNI</label>
+        <input id="dni" name="dni" type="number" class="form-control" required>
+    </div>
+    <div class=" col-md-6">
+        <label for="email" class="form-label">EMAIL</label>
+        <input id="email" name="email" type="text" class="form-control" required>
+    </div>
+    <div  style="display:none"class=" col-md-6">
+        <label for="password" class="form-label">PASSWORD</label>
+        <input id="password" name="password" type="password" class="form-control" required>
+    </div>
+</div>
+    <button  type = 'submit' class="w-50 btn btn guardar  btn btn-primary">registrar Usuario</button>
+
+
+
+</form>
+  
+<tbody>
+
+
+</tbody>
+
+
+  
+
+</div>
+   
+
+    </form>
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+
+
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+ <script src="js/tablaUsuarios.js"></script>
+
+</body>
+</html>
