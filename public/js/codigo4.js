@@ -15,7 +15,7 @@ $(document).ready(function(){
       const password = document.getElementById("password");
     
 
-      const regexContra = new RegExp("^[a-zA-Z]{4,16}$");
+      const regexContra = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*([^a-zA-Z\d\s])).{9,}$");
       const regexEmail = new RegExp("[^@\s]+@[^@\s]+\.[^@\s]+");
 
 
