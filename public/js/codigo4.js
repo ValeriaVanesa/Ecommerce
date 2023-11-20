@@ -15,8 +15,8 @@ $(document).ready(function(){
       const password = document.getElementById("password");
     
 
-      const regexContra = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*([^a-zA-Z\d\s])).{9,}$");
-      const regexEmail = new RegExp("[^@\s]+@[^@\s]+\.[^@\s]+");
+      const regexContra = new RegExp(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/);
+      const regexEmail = new RegExp(/[^@\s]+@[^@\s]+\.[^@\s]+/);
 
 
       let validacion;
@@ -78,7 +78,7 @@ $(document).ready(function(){
        redirect_rol.value = response.data.rol;
        form_redict.action = "/users/redirect";
        form_redict.method = "POST";
-       form_redict.submit();
+        form_redict.submit();
       }
    
    })

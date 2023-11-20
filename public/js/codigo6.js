@@ -13,11 +13,11 @@ $(document).ready(function () {
 
 
 
-      const regexNombre = new RegExp("^[a-zA-Z]{4,16}$");
-      const regexApellido = new RegExp("^[a-zA-Z]{4,16}$");
-      const regexDni = new RegExp("^[0-9]{8,8}");
-      const regexEmail = new RegExp("[^@\s]+@[^@\s]+\.[^@\s]+");
-      const regexContraseña = new RegExp("^[a-zA-Z]{4,16}$");
+      const regexNombre = new RegExp(/^[a-zA-Z]{4,16}$/);
+      const regexApellido = new RegExp(/^[a-zA-Z]{4,16}$/);
+      const regexDni = new RegExp(/^[0-9]{8,8}/);
+      const regexEmail = new RegExp(/[^@\s]+@[^@\s]+\.[^@\s]+/);
+      const regexContraseña = new RegExp(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/); //DEBE TENER 8 CARACTERES Y POR LO MENOS 1 NUMERO
       
 
       let validacion;

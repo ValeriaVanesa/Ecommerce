@@ -30,7 +30,7 @@ $(document).ready(function(){
    
     }
 
-    let url = 'inicio/nuevaSuscripcion';
+    let url = '/nuevaSuscripcion';
 
   
 
@@ -58,10 +58,8 @@ $(document).ready(function(){
          confirmButtonColor: "#FD5D9D",
          timer: 2500
       });
-     
-   
-     
-}
+       
+   }
 });
  });
 

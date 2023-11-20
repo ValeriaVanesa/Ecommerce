@@ -19,8 +19,8 @@ function actualizarUsuario (req,res){
 
 const actualizandoUsuario = async (req,res)=>{
 
-    console.log(req.params.id);
-    const id = req.params.id
+    console.log(req.body.id);
+    const id = req.body.id
 
 
 try{
@@ -34,7 +34,7 @@ try{
     
     })
 }catch(error){
-console.log('error')
+console.log(error)
 }
 }
 
@@ -43,8 +43,8 @@ console.log('error')
 
 
 const usuarioActualizado = async (req,res)=>{
-    console.log(req.params.id);
-    const id = req.params.id
+    console.log(req.body.id);
+    const id = req.body.id
 
 
 try{
@@ -54,10 +54,7 @@ try{
     const actualizar = await usuarios.findByIdAndUpdate(id, dato);
     console.log(actualizar);
 
-    return res.render('usuarioActualizado',{
-        title:'usuario Actualizado correctamente',
-       
-    })
+    return res.redirect('/tablaUsuarios');
 }catch(error){
     console.log('error')
 }

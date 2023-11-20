@@ -15,10 +15,7 @@ function compra (req,res){
 
 const showproducts = async(req, res)=>{
     const products = await compras.find()
-     res.send(products);
-        
-        
-      
+     res.send(products); 
     }
 
 //crear compra
@@ -27,7 +24,7 @@ const showproducts = async(req, res)=>{
 const nuevaCompra = async (req,res)=>{
 
     let { productos } = req.body;
-
+    console.log(productos);
     productos = JSON.parse(productos)
 
     let nombreProductos = ""

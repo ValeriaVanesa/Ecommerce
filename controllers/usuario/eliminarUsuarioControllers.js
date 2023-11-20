@@ -22,31 +22,26 @@ function eliminarUsuario(req,res){
 
 const usuarioEliminado= async (req,res)=>{
 
-    console.log(req.params._id)
+    console.log(req.body)
       
-        const id = req.params._id
+    const id = req.body.id
     
 
 
     try{
        
-    
-    let eliminar = await usuarios.findOneAndDelete(id )
-    console.log(eliminar)
-  if(eliminar){
-    res.render('eliminarUsuario',{
-        title:'Usuario eliminado'
-    });
-  }else{
-    res.send({
-        error: true,
-        code: 1,
-        message: "error al eliminar usuario"
-    })
-  }
-       
+        let eliminar = await usuarios.findByIdAndDelete(id)
 
-       
+        if(eliminar){
+            res.redirect('/tablaUsuarios');
+        } else {
+            //ESTO NO VA A FUNCIONAR
+            res.send({
+                error: true,
+                code: 1,
+                message: "error al eliminar usuario"
+            })
+        } 
     
     }catch(error){
         res.send({

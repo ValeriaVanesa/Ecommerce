@@ -4,6 +4,7 @@ const dotenv = require('dotenv');
 const cors = require('cors');
 const path=require('path');
 const hbs = require('hbs');
+const jwt = require('./jwt');
 
 dotenv.config();
 
@@ -12,6 +13,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/users', express.static(path.join(__dirname, 'public')));
+app.use('/actualizarUsuario', express.static(path.join(__dirname, 'public')));
 
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'views'));
@@ -19,12 +21,12 @@ hbs.registerPartials(path.join(__dirname,'views/partials'));
 
 const PORT = process.env.PORT;
 
-
-
-
-
-
-
+// app.use((req, res, next) => { 
+//     if (req.path == '/admin') { 
+//         jwt.auth(req, res, next);
+//     }
+//     next();
+// });
 
 const condicionesRoutes = require('./routes/usuario/condicionesRoutes');
 const calzadosRoutes = require('./routes/productos/calzadosRoutes');

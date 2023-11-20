@@ -110,10 +110,11 @@ const crearUsuarioPost = async (req,res) => {
 
 const redireccionUsusarioLogeado = (req, res) => { 
     const { redirect_email, redirect_jwt, redirect_rol } = req.body;
+    res.header('auth-token', redirect_jwt);
     if (redirect_rol == 'usuario') {
-        res.header('auth-token', redirect_jwt).redirect("/")
+        res.redirect("/");
     } else if (redirect_rol == 'admin') { 
-        res.header('auth-token', redirect_jwt).redirect("/admin")
+        res.redirect("http://localhost:3000/admin");
     }
 };
  

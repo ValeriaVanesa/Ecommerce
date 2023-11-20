@@ -18,25 +18,21 @@ return token;
 
 
 
-const auth=(req,res,next)=>{
-const token = req.header('auth-token');
-console.log(req.header('auth-token'));
- if(!token){
-    console.log('No hay token');
-    return res.json({
-        mensaje:'no hay acceso a la aplicacion' 
+const auth = (req, res, next) => {
+    const token = req.header('auth-token');
+    if(!token){
+        console.log('No hay token');
+        return res.redirect("/users/login");
+    }
+    try{
+        const tokenmacht = jwt.verify(token, clavejwt);
+        console.log(`El token es valido: ${tokenmacht.exp}`);
+    }catch(err){
+        return res.json({
+            mensaje:'No hay acceso a la aplicacion '
         })
 
- }
-try{
-    const tokenmacht = jwt.verify(token, clavejwt);
- console.log(`El token es valido: ${tokenmacht.exp}`);
-}catch(err){
-    return res.json({
-        mensaje:'No hay acceso a la aplicacion '
-    })
-
-}
+    }
     next();
 }
 

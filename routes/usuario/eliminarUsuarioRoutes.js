@@ -9,7 +9,7 @@ const{
 }= require('../../controllers/usuario/eliminarUsuarioControllers');
 
 router.get('/', eliminarUsuario);
-router.post('/:id',usuarioEliminado)
+router.post('/delete',usuarioEliminado)
 
 
 

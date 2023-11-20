@@ -12,4 +12,4 @@ router.get('/', admin);
 
  
 
-module.exports =router;
+module.exports = router;

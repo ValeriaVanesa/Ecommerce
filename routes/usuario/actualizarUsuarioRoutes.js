@@ -9,8 +9,8 @@ const{
 
 }= require('../../controllers/usuario/ActualizarUsuarioControllers');
 router.get('/',actualizarUsuario)
-router.get('/:id',actualizandoUsuario)
-router.post('/:id',usuarioActualizado)
+router.post('/modify',actualizandoUsuario)
+router.post('/modifing',usuarioActualizado)
 
 
 

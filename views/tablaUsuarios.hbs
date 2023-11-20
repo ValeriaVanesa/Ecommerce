@@ -71,10 +71,14 @@
      <td>{{nombre}}</td>
      <td>{{apellido}}</td> 
       <td>{{email}}</td>
-     <td><form action="/eliminarUsuario/{{_id}}" method='post'>
+     <td><form action="/eliminarUsuario/delete" method='POST'>
+     <input type="hidden" id="id" name="id" value="{{_id}}">
     <button type="submit" class="btn btn-danger">Eliminar</button> 
     </form></td>
-     <td><a href="/actualizarUsuario/{{_id}}" class="btn btn-primary">Actualizar</a> </td>
+     <td><form action="/actualizarUsuario/modify" method='POST'>
+     <input type="hidden" id="id" name="id" value="{{_id}}">
+    <button type="submit" class="btn btn-primary">Modificar</button> 
+    </form></td>
  </tr>
 
  
