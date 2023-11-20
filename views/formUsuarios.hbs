@@ -30,7 +30,7 @@
                 <li> <a href="/admin">Inicio</a></li>
                      
                <li><a href="/formProductos">RegistroProductos</a></li>
-                   <li><a href="/administracionUsuarios"> Registro Usuarios</a></li>
+                   <li><a href="/formUsuarios"> Registro Usuarios</a></li>
                      <li><a href="/tablaUsuarios">Tabla Usuarios</a></li>
                        <li><a href="/listaProductos"> Lista Productos</a></li>
 
@@ -56,7 +56,7 @@
     <div class="chadow-lg pb-3 mb-5 bg-body rounded">
 
         <h2 id="datos">Datos </h2>
-<form action="/administracionUsuarios/crear" method = 'POST'>
+<form action="/formUsuarios" method = 'POST'>
  
     <div class=" col-md-6">
         <label for="nombre" class="form-label">NOMBRE</label>
@@ -67,24 +67,18 @@
         <label for="apellido" class="form-label">APELLIDO</label>
         <input id="apellido" name="apellido" type="text" class="form-control" required>
     </div>
-    <div class=" col-md-6">
-        <label for="fechaNacimiento" class="form-label">FECHA NACIMIENTO</label>
-        <input id="fechaNacimiento" name="fechaNacimiento" type="date" class="form-control" required>
-    </div>
-    <div class=" col-md-6">
-        <label for="dni" class="form-label">DNI</label>
-        <input id="dni" name="dni" type="number" class="form-control" required>
-    </div>
+   
+   
     <div class=" col-md-6">
         <label for="email" class="form-label">EMAIL</label>
         <input id="email" name="email" type="text" class="form-control" required>
     </div>
-    <div  style="display:none"class=" col-md-6">
-        <label for="password" class="form-label">PASSWORD</label>
-        <input id="password" name="password" type="password" class="form-control" required>
-    </div>
+  
+
+
 </div>
-    <button  type = 'submit' class="w-50 btn btn guardar  btn btn-primary">registrar Usuario</button>
+    <button  type = 'submit' class="w-50 btn btn guardar  btn btn-success">registrar Usuario</button>
+<button  type ='reset' class="w-50  btn btn-danger ">eliminar</button>
 
 
 

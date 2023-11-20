@@ -4,7 +4,8 @@
 
 <link rel="stylesheet" href="./css/style3.css">
 
-<body>
+</head>
+  <body>
     <header>
         <div class="fijo">
            <div class="envios">
@@ -19,9 +20,9 @@
     <section>
 
         <div class="registrarse">
+          
            
               <a href="/loginAdmin">Login Administrador</a>
-           
           
         </div>
         
@@ -29,9 +30,11 @@
         <nav>
            <div >
              <ul id="menu-horizontal">
-                <li> <a href="/admin">Inicio</a></li>
-               <li><a href="/formProductos">RegistroProductos</a></li>
-                   <li><a href="/administracionUsuarios"> Registro Usuarios</a></li>
+               
+                 
+                  <li> <a href="/admin">Inicio</a></li>
+                    <li><a href="/formProductos">RegistroProductos</a></li>
+                   <li><a href="/formUsuarios"> Registro Usuarios</a></li>
                      <li><a href="/tablaUsuarios">Tabla Usuarios</a></li>
                        <li><a href="/listaProductos"> Lista Productos</a></li>
                
@@ -39,34 +42,17 @@
             </div> 
             
           </nav>
-           <br><br>
+           <br><br><br><br><br>
           
-<h2>{{title}}</h2>
+
+
+
+
+
+    </section>
+        <br><br>  
+<h2 style="color:darkmagenta">{{title}}</h2>
 <br><br>
-
-<div class="container m-5" >
-{{#each productos}}
-<div class="card" style="width: 18rem;">
-  <img src={{imagen}} class="card-img-top" alt="imagenes">
-  <div class="card-body">
-    <h5 class="card-title">{{nombre}} </h5>
-    <p class="card-text">{{precio}}  </p>
-    <form action="/eliminarProducto" method='post'>
-    <button type="submit" class="btn btn-danger">Eliminar</button> 
-    </form>
- <form action="/actualizarProducto" method='post'>
-    <button type="submit" class="btn btn-primary">Actualizar</button> 
-    </form>
-  </div>
-
-</div>
-  {{/each}}
-</div>
-
-
-
-
-
 
 
 <table id="tablaUsuarios" class="table mt-4">
@@ -83,13 +69,30 @@
 </thead>
 <tbody>
 
+{{#each productos}}
+
+ <tr>
+      <td style="display:none">ID</td>
+       
+ </tr>
+ <tr>
+  <td>   <img src={{imagen}} class="card " style="width: 10rem;" alt="imagenes"></td>
+   <td>{{nombre}}</td>
+     <td>{{precio}}</td> 
+     <td><form action="/eliminarProducto/{{_id}}" method='post'>
+    <button type="submit" class="btn btn-danger">Eliminar</button> 
+    </form></td>
+     <td><a href="/actualizarProducto/{{_id}}" class="btn btn-primary">Actualizar</a> </td>
+ </tr>
+
+ 
 
 
 
 
 
 
-
+{{/each}}
 
 
 

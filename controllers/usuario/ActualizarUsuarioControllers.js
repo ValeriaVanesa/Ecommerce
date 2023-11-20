@@ -1,7 +1,7 @@
 const MongoClient = require("mongodb").MongoClient;
 const dotenv = require("dotenv");
 dotenv.config();
-const producto= require('../../models/productoModels');
+const usuarios= require('../../models/adminClientesModels');
 const bcrypt = require('bcrypt');
 const MONGO_URL_ATLAS= process.env.MONGO_URL_ATLAS;
 
@@ -11,24 +11,24 @@ const path = require('path');
 require('../../database/conexion');
 
 
-function actualizarProducto (req,res){
-    res.render('actualizar')
+function actualizarUsuario (req,res){
+    res.render('actualizarUsuario')
 
     }
 
 
-const actualizandoProducto = async (req,res)=>{
+const actualizandoUsuario = async (req,res)=>{
 
     console.log(req.params.id);
     const id = req.params.id
 
 
 try{
-    const update = await producto.findById(id);
+    const update = await usuarios.findById(id);
     console.log(update);
 
-    return res.render('actualizar',{
-        title:'actualizar producto',
+    return res.render('actualizarUsuario',{
+        title:'actualizar Usuario',
         update,
         id
     
@@ -42,7 +42,7 @@ console.log('error')
 
 
 
-const productoActualizado = async (req,res)=>{
+const usuarioActualizado = async (req,res)=>{
     console.log(req.params.id);
     const id = req.params.id
 
@@ -51,11 +51,11 @@ try{
     const dato = req.body;
     console.log(dato);
 
-    const actualizar = await producto.findByIdAndUpdate(id, dato);
+    const actualizar = await usuarios.findByIdAndUpdate(id, dato);
     console.log(actualizar);
 
-    return res.render('ProductoActualizado',{
-        title:'producto Actualizado correctamente',
+    return res.render('usuarioActualizado',{
+        title:'usuario Actualizado correctamente',
        
     })
 }catch(error){
@@ -78,7 +78,7 @@ try{
 
 
 module.exports={
-    actualizarProducto,
-    actualizandoProducto,
-    productoActualizado
+    actualizarUsuario,
+    actualizandoUsuario,
+    usuarioActualizado
 }

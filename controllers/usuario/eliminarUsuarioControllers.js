@@ -1,7 +1,7 @@
 const MongoClient = require("mongodb").MongoClient;
 const dotenv = require("dotenv");
 dotenv.config();
-const producto= require('../../models/productoModels');
+const usuarios= require('../../models/adminClientesModels');
 const bcrypt = require('bcrypt');
 const MONGO_URL_ATLAS= process.env.MONGO_URL_ATLAS;
 
@@ -13,32 +13,35 @@ require('../../database/conexion');
 
 
 
-function eliminarProducto(req,res){
+function eliminarUsuario(req,res){
 
-    res.render('eliminarProducto')
+    res.render('eliminarUsuario')
     }
    
 
 
-const productoEliminado= async (req,res)=>{
+const usuarioEliminado= async (req,res)=>{
+
     console.log(req.params._id)
       
         const id = req.params._id
     
+
+
     try{
+       
     
-    let eliminar = await producto.findOneAndDelete(id)
+    let eliminar = await usuarios.findOneAndDelete(id )
     console.log(eliminar)
   if(eliminar){
-    res.render('eliminarProducto',{
-        title:'Producto eliminado',
-        id
+    res.render('eliminarUsuario',{
+        title:'Usuario eliminado'
     });
   }else{
     res.send({
         error: true,
         code: 1,
-        message: "error al eliminar producto"
+        message: "error al eliminar usuario"
     })
   }
        
@@ -60,9 +63,8 @@ const productoEliminado= async (req,res)=>{
 
 
 
-
 module.exports={
-    eliminarProducto,
-    productoEliminado
+    eliminarUsuario,
+    usuarioEliminado
     
 }

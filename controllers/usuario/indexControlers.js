@@ -2,9 +2,9 @@ const MongoClient = require("mongodb").MongoClient;
 const dotenv = require("dotenv");
 dotenv.config();
 const suscripciones= require('../../models/suscripcionModels');
-const bcrypt = require('bcrypt');
+
 const MONGO_URL_ATLAS= process.env.MONGO_URL_ATLAS;
-const MONGO_URL_LOCAL= process.env.MONGO_URL_LOCAL;
+
 const mongoose = require('mongoose');
 const path = require('path');
 
@@ -65,34 +65,6 @@ const nuevaSuscripcion= async (req,res) => {
     }
 }
         
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //Actualizar suscripcion

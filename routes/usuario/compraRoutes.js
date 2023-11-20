@@ -15,8 +15,8 @@ const {
 router.get('/',compra);
 router.get('/mostrarProductos',showproducts )
 router.post('/',nuevaCompra);
-router.put( '/:id', actualizarCompra);
-router.delete( '/:id', eliminarCompra);
+router.put( '/update', actualizarCompra);
+router.delete( '/delete', eliminarCompra);
 
 module.exports = router;
  

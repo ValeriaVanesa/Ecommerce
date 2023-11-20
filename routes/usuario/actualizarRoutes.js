@@ -3,13 +3,14 @@ const router= express.Router();
 
 const{
 actualizarProducto,
+actualizandoProducto,
 productoActualizado
 
 
 }= require('../../controllers/usuario/actualizarProductoControllers');
-
-router.get('/', actualizarProducto);
-router.post('/',productoActualizado)
+router.get('/',actualizarProducto)
+router.get('/:id',actualizandoProducto)
+router.post('/:id',productoActualizado)
 
 
 

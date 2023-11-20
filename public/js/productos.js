@@ -57,57 +57,7 @@ const productos =[
        " https://th.bing.com/th/id/OIP.bQdo4Q1syg5cG-QwyfCUlgHaHa?pid=ImgDet&w=500&h=500&rs=1 ",
        cantidad:1,
       } ,  
-    {
-       id: 6,
-       nombre:"Cartera White",
-       precio:13900,
-       img:
-       "https://falabella.scene7.com/is/image/FalabellaPE/19081790_1?wid=800&hei=800&qlt=70 ",
-       cantidad:1,
-       
-    },
-    
-    {
-       id: 7,
-       nombre:"Mochila LV",
-       precio:15000,
-       img: 
-       " https://th.bing.com/th/id/OIP.iWKTbhZ3YO3iAg_iIZtRaAHaHa?pid=ImgDet&rs=1",
-       cantidad:1,
-    },   
-   
-    {
-      id: 8,
-      nombre:"Cartera Coral",
-      precio:14900,
-      img: 
-      " https://images-na.ssl-images-amazon.com/images/I/71YthL5p64L.jpg ",
-      cantidad:1,
-   },   
-   {
-      id: 9,
-      nombre:"Bandolera Brown",
-      precio:11900,
-      img: 
-      "https://i.pinimg.com/originals/ad/c6/6f/adc66fd89cc8128f982c7254dd53d82c.png ",
-      cantidad:1,
-   },   
-   {
-      id: 10,
-      nombre:"Mochila Pink",
-      precio:13900,
-      img: 
-      " https://imgix.bustle.com/nylon/18457140/origin.jpg?w=414&h=414&fit=crop&crop=faces&auto=format%2Ccompress&q=50&dpr=2 ",
-      cantidad:1,
-   },   
-   {
-      id: 11,
-      nombre:"Mochila Black & White",
-      precio:15000,
-      img: 
-      " https://th.bing.com/th/id/OIP.uYhNuOG7Gkdvl86t57T-uAAAAA?pid=ImgDet&w=384&h=384&rs=1 ",
-      cantidad:1,
-   },   
+  
 
    {
       id: 12,

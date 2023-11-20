@@ -2,10 +2,10 @@ const express =require("express");
 const router= express.Router();
 
 const{
-   tablaUsuarios
+   listarClientes
 }= require('../../controllers/usuario/tablaUsuariosControlers');
 
-router.get('/', tablaUsuarios);
+router.get('/', listarClientes);
 
 
 

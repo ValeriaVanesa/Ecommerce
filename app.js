@@ -39,13 +39,18 @@ const contactoRoutes = require('./routes/usuario/contactoRoutes');
 const cuentaRoutes = require('./routes/usuario/cuentaRoutes');
 const indexRoutes = require('./routes/usuario/indexRoutes');
 const adminRoutes= require('./routes/usuario/adminRoutes');
-const administracionUsuarioRoutes = require('./routes/usuario/administracionUsuariosRoutes');
+const registroUsuariosRoutes = require('./routes/usuario/registroUsuariosRoutes');
 const registroProductosRoutes = require('./routes/usuario/registroProductosRoutes');
 const loginAdminRoutes= require('./routes/usuario/loginAdminRoutes');
 const tablaUsuariosRoutes = require('./routes/usuario/tablaUsuariosRoutes');
 const listaProductosRoutes = require('./routes/usuario/listaProductosRoutes');
 const eliminarProductoRoutes= require('./routes/usuario/eliminarProductoRoutes');
 const actualizarRoutes = require('./routes/usuario/actualizarRoutes');
+const productoActualizadoRoutes = require('./routes/usuario/productoActualizadoRoutes');
+const eliminarUsuarioRoutes = require('./routes/usuario/eliminarUsuarioRoutes');
+const actualizarUsuarioRoutes = require('./routes/usuario/actualizarUsuarioRoutes');
+const usuarioActualizadoRoutes = require('./routes/usuario/usuarioActualizadoRoutes');
+
 
 app.use('/',indexRoutes);
 app.use('/users', usersRoutes);
@@ -53,7 +58,7 @@ app.use('/admin',adminRoutes);
 app.use('/compra',compraRoutes);
 app.use('/contacto',contactoRoutes);
 app.use('/cuenta', cuentaRoutes);
-app.use('/administracionUsuarios',administracionUsuarioRoutes);
+app.use('/formUsuarios',registroUsuariosRoutes);
 app.use('/formProductos',registroProductosRoutes);
 app.use('/loginAdmin',loginAdminRoutes);
 app.use('/condiciones',condicionesRoutes);
@@ -61,6 +66,10 @@ app.use('/tablaUsuarios',tablaUsuariosRoutes);
 app.use('/listaProductos',listaProductosRoutes);
 app.use('/eliminarProducto',eliminarProductoRoutes);
 app.use('/actualizarProducto',actualizarRoutes);
+app.use('/productoActualizado',productoActualizadoRoutes);
+app.use('/eliminarUsuario',eliminarUsuarioRoutes);
+app.use ('/actualizarUsuario',actualizarUsuarioRoutes);
+app.use('/usuarioActualizado',usuarioActualizadoRoutes);
 
 app.use('/condiciones',condicionesRoutes)
 app.use('/calzados',calzadosRoutes);

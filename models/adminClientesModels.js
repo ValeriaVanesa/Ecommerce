@@ -16,10 +16,7 @@ const clienteSchema= new Schema({
         type:String,
         required:true
         },  
-    telefono:{
-        type:String,
-        required:true
-    },
+   
    
     timestamp:{
         type:Date,

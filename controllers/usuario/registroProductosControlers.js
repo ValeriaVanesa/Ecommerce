@@ -39,7 +39,7 @@ const registroProducto = async (req,res)=>{
         }catch(error){
             console.log(error);
             return res.json({
-                message:'error al crear usuario'
+                message:'error al crear producto'
                }) 
              
         }
@@ -52,21 +52,9 @@ const registroProducto = async (req,res)=>{
     
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 module.exports= {
 formProductos,
-registroProducto,
+registroProducto
 
 
    

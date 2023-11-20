@@ -48,6 +48,7 @@ $(document).ready(function(){
 
   
    } else if (response.error == false) { 
+    
       Swal.fire({
          position: 'center',
          icon: 'success',
@@ -58,13 +59,14 @@ $(document).ready(function(){
          timer: 2500
       });
      
-     }
-
-
-
-   });
- 
+   
+     
+}
 });
+ });
+
+ 
+
 
 const validar = (input, expreg) => { 
 

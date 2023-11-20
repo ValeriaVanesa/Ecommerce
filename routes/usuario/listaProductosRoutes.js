@@ -2,14 +2,16 @@ const express =require("express");
 const router= express.Router();
 
 const{
-
-    listarProductos, 
+    listarProductos
+ 
+   
  
 
  
 }= require('../../controllers/usuario/listaProductosControlers');
 
 router.get('/', listarProductos);
+
 
 
 

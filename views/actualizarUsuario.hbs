@@ -1,5 +1,4 @@
-
- <link rel="stylesheet" href="./css/style3.css">
+<link rel="stylesheet" href="./css/style3.css">
 
 
 <body>
@@ -60,18 +59,21 @@
 <div class = 'container'>
     <div class="chadow-lg pb-3 mb-5 bg-body rounded">
         <h2 id="datos">Datos</h2>
-<form action="/actualizarProducto/{{update._id}}" method = 'POST'>
-    <div class=" col-md-6">
-        <label for="imagen" class="form-label">IMAGEN</label>
-        <input id="imagen" name="imagen" type="text" class="form-control" value= {{ update.imagen}} >
-    </div>
-    <div class=" col-md-6">
+<form action="/actualizarUsuario/{{update._id}}" method = 'POST'>
+
+  <div class=" col-md-6">
         <label for="nombre" class="form-label">NOMBRE</label>
         <input id="nombre" name="nombre" type="text" class="form-control" value= {{ update.nombre }}>
     </div>
+
     <div class=" col-md-6">
-        <label for="precio" class="form-label">PRECIO</label>
-        <input id="precio" name="precio" type="number" class="form-control" value={{ update.precio}} >
+        <label for="apellido" class="form-label">APELLIDO</label>
+        <input id="apellido" name="apellido" type="text" class="form-control" value= {{ update.apellido}} >
+    </div>
+  
+    <div class=" col-md-6">
+        <label for="email" class="form-label">EMAIL</label>
+        <input id="email" name="email" type="email" class="form-control" value={{ update.email}} >
     </div>
  
 
@@ -79,7 +81,7 @@
     
  
 </div>
-    <button  type ='submit' class="w-50  btn btn-primary ">Actualizar Producto</button>
+    <button  type ='submit' class="w-50  btn btn-primary ">Actualizar Usuario</button>
  <button  type ='reset' class="w-50  btn btn-danger ">eliminar </button>
 
 

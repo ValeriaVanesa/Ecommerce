@@ -8,17 +8,17 @@ const path = require('path');
 require('../../database/conexion');
 
 
-function listaProductos (req,res){
-
-    res.render('listaProductos');
-
-
-    
+function listaProductos (req,res) {
+    const productos =  producto.find({});
+    res.render('listaProductos',{
+        title:'Listado de productos', productos 
+    })
+  
 }
 
 const listarProductos= async(req,res)=>{
 
-    try{
+   try{
         const productos = await producto.find({});
      
 
@@ -42,7 +42,7 @@ const listarProductos= async(req,res)=>{
 
 module.exports= {
 listaProductos,
-listarProductos,
+listarProductos
 
 
 
