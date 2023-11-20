@@ -19,6 +19,13 @@ hbs.registerPartials(path.join(__dirname,'views/partials'));
 
 const PORT = process.env.PORT;
 
+
+
+
+
+
+
+
 const condicionesRoutes = require('./routes/usuario/condicionesRoutes');
 const calzadosRoutes = require('./routes/productos/calzadosRoutes');
 const perfumesRoutes = require('./routes/productos/perfumesRoutes');
