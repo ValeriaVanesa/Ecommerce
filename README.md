@@ -67,4 +67,8 @@ Entre sus caracteristicas encontramos:
 
 ### **SECCIONES RELACIONADAS CON EL ADMINISTRADOR:**
 
+
+ **Los datos son: email: admin2@gmail.com y la contraseña:asdasd123**
+  
+
  Para ingresar en esta sección, se necesita el email y la contraseña para loguarse como administrador. Aquí encontramos los formularios para ingresar nuevos productos o nuevos usuarios y poder eliminarlos o actualizarlos posteriormente en una tabla. todos los cambios se reflejan en la coleccion de productos y de clientes de la base de datos. 
