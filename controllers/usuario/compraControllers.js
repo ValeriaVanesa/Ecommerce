@@ -1,21 +1,17 @@
-
-const MongoClient = require("mongodb").MongoClient;
 const dotenv = require("dotenv");
 dotenv.config();
-const compras= require('../../models/compraModels');
-const MONGO_URL_ATLAS= process.env.MONGO_URL_ATLAS;
-const path=require('path');
-const mongoose = require('mongoose');
-const database = require ('../../database/conexion')
+const producto = require('../../models/productoModels');
 
-
-function compra (req,res){
-    res.render('compra');
+async function compra (req, res) {
+    const productos = await producto.find()
+    res.render('compra', {
+        productos: productos
+    });
 }
 
 const showproducts = async(req, res)=>{
-    const products = await compras.find()
-     res.send(products); 
+    const productos = await producto.find()
+     res.send(productos); 
     }
 
 //crear compra

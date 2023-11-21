@@ -21,19 +21,15 @@ function eliminarProducto(req,res){
 
 
 const productoEliminado= async (req,res)=>{
-    console.log(req.params._id)
       
-        const id = req.params._id
+        const id = req.body.id_delete
     
     try{
     
     let eliminar = await producto.findOneAndDelete(id)
     console.log(eliminar)
   if(eliminar){
-    res.render('eliminarProducto',{
-        title:'Producto eliminado',
-        id
-    });
+    res.redirect("/listaProductos");
   }else{
     res.send({
         error: true,

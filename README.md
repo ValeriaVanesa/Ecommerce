@@ -2,13 +2,13 @@
 
 ### **Listado de tecnologías utilizadas:**
 
--[Node.js](https://nodejs.org/en)  - Para el lado del servidor.
--[Javascript](https://developer.mozilla.org/es/docs/Web/JavaScript) para validaciones y funcionalidades en el lado del cliente.
--[Handlebars](https://handlebarsjs.com/ )  - Como motor de plantilla.
--[Mongo DB](https://www.mongodb.com/es-) -Como motor de base de datos.
--[Boostrap](https://getbootstrap.com/) - Como framedwork front-end.
--[JQuery](https://jquery.com/) - Como libreria de JavaScript.
--[Markdown](https://markdown.es/) - Para el diseño del README.md.
+- [Node.js](https://nodejs.org/en)  - Para el lado del servidor.
+- [Javascript](https://developer.mozilla.org/es/docs/Web/JavaScript) para validaciones y funcionalidades en el lado del cliente.
+- [Handlebars](https://handlebarsjs.com/ )  - Como motor de plantilla.
+- [Mongo DB](https://www.mongodb.com/es-) -Como motor de base de datos.
+- [Boostrap](https://getbootstrap.com/) - Como framedwork front-end.
+- [JQuery](https://jquery.com/) - Como libreria de JavaScript.
+- [Markdown](https://markdown.es/) - Para el diseño del README.md.
 
 
 ## **instalacion**

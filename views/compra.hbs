@@ -73,10 +73,26 @@
 
 
 <br><br><br>
-
-
-
-
+    {{#if cantidad}}
+        {{#each productos}}
+        <div id="shopContent">
+            <div>
+                <img src="{{imagen}}">
+                <h3>{{nombre}}</h3>
+                <p class="price">Precio: $ {{precio}}</p>
+                {{#if cantidad}}
+                <input type="button" class="comprar" onclick="botonComprar('{{_id}}', '{{imagen}}', '{{nombre}}', '{{precio}}')" value="Comprar" />
+                {{else}}
+                <p>Sin stock</p>
+                {{/if}}
+            </div>
+        </div>
+        {{/each}}
+    {{else}}
+    <div id="shopContent">
+        <p>NO HAY PRODUCTOS</p>
+    </div>
+    {{/if}}
 <br><br>
 
 

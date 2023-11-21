@@ -9,7 +9,7 @@ const{
 }= require('../../controllers/usuario/eliminarProductoControllers');
 
 router.get('/', eliminarProducto);
-router.post('/:id',productoEliminado)
+router.post('/delete',productoEliminado)
 
 
 

@@ -35,21 +35,7 @@
              
            </nav>
        </section>
-       
      
-      <p> 
-        
-        {{ update }}
-
-      </p> 
-<p>
-    {{update._id}}
-</p>
-     
-      
-
-
-
  <h2 id="tituloTablas" class="text-center" style="color:darkmagenta">formulario de actualización </h2>
 
 <br><br><br>
@@ -60,7 +46,8 @@
 <div class = 'container'>
     <div class="chadow-lg pb-3 mb-5 bg-body rounded">
         <h2 id="datos">Datos</h2>
-<form action="/actualizarProducto/{{update._id}}" method = 'POST'>
+<form action="/actualizarProducto/actualizar" method = 'POST'>
+    <input type="hidden" id="id" name="id" value="{{update._id}}">
     <div class=" col-md-6">
         <label for="imagen" class="form-label">IMAGEN</label>
         <input id="imagen" name="imagen" type="text" class="form-control" value= {{ update.imagen}} >
@@ -72,6 +59,10 @@
     <div class=" col-md-6">
         <label for="precio" class="form-label">PRECIO</label>
         <input id="precio" name="precio" type="number" class="form-control" value={{ update.precio}} >
+    </div>
+    <div class=" col-md-6">
+        <label for="cantidad" class="form-label">CANTIDAD</label>
+        <input id="cantidad" name="cantidad" type="number" class="form-control" value={{ update.cantidad}} >
     </div>
  
 

@@ -9,8 +9,8 @@ productoActualizado
 
 }= require('../../controllers/usuario/actualizarProductoControllers');
 router.get('/',actualizarProducto)
-router.get('/:id',actualizandoProducto)
-router.post('/:id',productoActualizado)
+router.post('/actualizarFormulario',actualizandoProducto)
+router.post('/actualizar',productoActualizado)
 
 
 

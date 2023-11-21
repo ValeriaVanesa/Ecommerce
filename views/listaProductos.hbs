@@ -79,10 +79,18 @@
   <td>   <img src={{imagen}} class="card " style="width: 10rem;" alt="imagenes"></td>
    <td>{{nombre}}</td>
      <td>{{precio}}</td> 
-     <td><form action="/eliminarProducto/{{_id}}" method='post'>
-    <button type="submit" class="btn btn-danger">Eliminar</button> 
-    </form></td>
-     <td><a href="/actualizarProducto/{{_id}}" class="btn btn-primary">Actualizar</a> </td>
+     <td>
+      <form action="/eliminarProducto/delete" method='post'>
+        <input type="hidden" id="id_delete" name="id_delete" value="{{_id}}">
+        <button type="submit" class="btn btn-danger">Eliminar</button> 
+      </form>
+    </td>
+     <td>
+      <form action="/actualizarProducto/actualizarFormulario" method='post'>
+        <input type="hidden" id="id_update" name="id_update" value="{{_id}}">
+        <button type="submit" class="btn btn-primary">Actualizar</button> 
+      </form>
+      </td>
  </tr>
 
  

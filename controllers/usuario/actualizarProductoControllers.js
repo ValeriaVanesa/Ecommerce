@@ -19,8 +19,7 @@ function actualizarProducto (req,res){
 
 const actualizandoProducto = async (req,res)=>{
 
-    console.log(req.params.id);
-    const id = req.params.id
+    const id = req.body.id_update
 
 
 try{
@@ -31,7 +30,6 @@ try{
         title:'actualizar producto',
         update,
         id
-    
     })
 }catch(error){
 console.log('error')
@@ -43,21 +41,15 @@ console.log('error')
 
 
 const productoActualizado = async (req,res)=>{
-    console.log(req.params.id);
-    const id = req.params.id
+    const id = req.body.id
 
 
 try{
     const dato = req.body;
-    console.log(dato);
 
     const actualizar = await producto.findByIdAndUpdate(id, dato);
-    console.log(actualizar);
 
-    return res.render('ProductoActualizado',{
-        title:'producto Actualizado correctamente',
-       
-    })
+    return res.redirect('/listaProductos')
 }catch(error){
     console.log('error')
 }

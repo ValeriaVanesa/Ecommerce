@@ -9,10 +9,13 @@ function admin(req,res){
 
 }
 
-
+function logout(req,res){
+    return res.clearCookie("auth_token").redirect("/");
+}
 
 module.exports= {
-admin
+    admin,
+    logout
 
    
 }

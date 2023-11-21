@@ -17,12 +17,13 @@ function formProductos(req,res){
 }
 
 const registroProducto = async (req,res)=>{
-    const {  imagen, nombre , precio }  = req.body;
+    const {  imagen, nombre , precio, cantidad }  = req.body;
 
     const datos = {
        imagen:imagen,
        nombre:nombre,
-       precio:precio
+        precio: precio,
+       cantidad: cantidad
       
     }
 

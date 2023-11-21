@@ -115,48 +115,62 @@ const productos =[
 
 let carrito=[];
 
-productos.forEach((product)=>{
-let content= document.createElement("div");
-content.innerHTML= `
-<img src="${product.img}">
-<h3>${product.nombre}</h3>
-<p class="price">$ ${product.precio} </p>
+// productos.forEach((product)=>{
+   // let content= document.createElement("div");
+   // content.innerHTML= `
+   //    <img src="${product.img}">
+   //    <h3>${product.nombre}</h3>
+   //    <p class="price">$ ${product.precio} </p>
+   // `;
+   // shopContent.append(content);
 
-`;
-shopContent.append(content);
-
-let comprar= document.createElement("button");
-comprar.innerText="comprar";
-comprar.className="comprar";
-content.append(comprar);
-
-comprar.addEventListener("click",()=>{
-
-   const repeat = carrito.some((repeatProduct)=> repeatProduct.id === product.id);
-
-if(repeat){
-   carrito.map((prod)=>{
-      if(prod.id === product.id){
-         prod.cantidad++;
-       }
-        });
-      }else{
-         carrito.push({
-            id: product.id,
-            img: product.img,
-            nombre: product.nombre,
-            precio: product.precio,
-            cantidad: product.cantidad,
-         });
-      }
-      console.log(carrito);
-   });
-
+   // let comprar= document.createElement("button");
+   // comprar.innerText="comprar";
+   // comprar.className="comprar";
+   // content.append(comprar);
    
-   
-});
+// });
 
+function botonComprar(id, imagen, nombre, precio) {
+   const repeat = carrito.some((repeatProduct) => repeatProduct.id === id);
+   if(repeat){
+      carrito.map((prod)=>{
+         if(prod.id === id){
+            prod.cantidad++;
+         }
+      });
+   }else{
+      carrito.push({
+         id: id,
+         img: imagen,
+         nombre: nombre,
+         precio: precio,
+         cantidad: 1,
+      });
+   }
+}
 
+// comprar.addEventListener("click",()=>{
+
+//       const repeat = carrito.some((repeatProduct)=> repeatProduct.id === product.id);
+
+//       if(repeat){
+//          carrito.map((prod)=>{
+//             if(prod.id === product.id){
+//                prod.cantidad++;
+//             }
+//          });
+//       }else{
+//          carrito.push({
+//             id: product.id,
+//             img: product.img,
+//             nombre: product.nombre,
+//             precio: product.precio,
+//             cantidad: product.cantidad,
+//          });
+//       }
+//       console.log(carrito);
+// });
 
 
 const pintarCarrito =()=>{ 
