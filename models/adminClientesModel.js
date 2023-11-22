@@ -1,3 +1,4 @@
+
 const mongoose = require('mongoose');
 const {Schema} = require ('mongoose');
 
@@ -7,17 +8,16 @@ const clienteSchema= new Schema({
        type:String,
        required:true
         },
-   apellido:{
+        apellido:{
         type:String,
-        required:true
-         },
+         required:true
+        },
    
     email:{
         type:String,
         required:true
         },  
-   
-   
+ 
     timestamp:{
         type:Date,
         default:Date.now()

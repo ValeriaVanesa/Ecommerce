@@ -32,7 +32,9 @@ password:{
 
 rol:{
     type:String,
-    required:true
+    required:true,
+  
+    
     },
 
 timestamp:{

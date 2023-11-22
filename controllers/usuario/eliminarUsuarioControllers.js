@@ -1,7 +1,7 @@
 const MongoClient = require("mongodb").MongoClient;
 const dotenv = require("dotenv");
 dotenv.config();
-const usuarios= require('../../models/adminClientesModels');
+const usuarios= require('../../models/adminClientesModel');
 const bcrypt = require('bcrypt');
 const MONGO_URL_ATLAS= process.env.MONGO_URL_ATLAS;
 
@@ -35,7 +35,7 @@ const usuarioEliminado= async (req,res)=>{
         if(eliminar){
             res.redirect('/tablaUsuarios');
         } else {
-            //ESTO NO VA A FUNCIONAR
+          
             res.send({
                 error: true,
                 code: 1,

@@ -17,9 +17,9 @@ precio:{
     type:Number,
     required:true
 },
-    cantidad: {
-        type: Number,
-        requerid: true
+ cantidad: {
+     type: Number,
+     requerid: true
     }
 
 

@@ -1,6 +1,6 @@
 const MongoClient = require("mongodb").MongoClient;
 require("dotenv").config();
-const usuarios= require('../../models/adminClientesModels');
+const usuarios= require('../../models/adminClientesModel');
 const bcrypt = require('bcrypt');
 const MONGO_URL_ATLAS= process.env.MONGO_URL_ATLAS;
 const mongoose = require('mongoose');

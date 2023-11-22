@@ -1,6 +1,6 @@
 const MongoClient = require("mongodb").MongoClient;
 require("dotenv").config();
-const usuarios= require('../../models/adminClientesModels');
+const usuarios= require('../../models/adminClientesModel')
 const bcrypt = require('bcrypt');
 const MONGO_URL_ATLAS= process.env.MONGO_URL_ATLAS;
 const mongoose = require('mongoose');
@@ -18,12 +18,14 @@ function formUsuarios(req,res){
 }
 
 const registroUsuario = async (req,res)=>{
-    const { nombre , apellido, email }  = req.body;
+    const { nombre , apellido, fechaNacimiento, email, password }  = req.body;
 
     const datos = {
      nombre:nombre,
      apellido:apellido,
+     fechaNacimiento,
      email:email,
+     password
      
       
     }
