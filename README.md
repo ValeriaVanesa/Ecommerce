@@ -35,6 +35,7 @@ Las variables de entorno son las siguientes:
 - mongoose
 - mongodb
 - bcrypt
+- cookie-parser
 
 
 ### **PROPOSITO DE LA APP**
@@ -72,6 +73,5 @@ Entre sus caracteristicas encontramos:
   
  
  Aquí encontramos los formularios para ingresar nuevos productos o nuevos usuarios y poder eliminarlos o actualizarlos posteriormente en una tabla. todos los cambios se reflejan en la coleccion de productos y de clientes de la base de datos. 
-
 
 
