@@ -35,6 +35,7 @@ Las variables de entorno son las siguientes:
 - mongoose
 - mongodb
 - bcrypt
+- cookie-parser
 
 
 ### **PROPOSITO DE LA APP**
