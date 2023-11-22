@@ -10,6 +10,7 @@ const jwt = require('./jwt');
 dotenv.config();
 
 
+
 app.use(cors());
 app.use(cookieParser());
 app.use(express.json());

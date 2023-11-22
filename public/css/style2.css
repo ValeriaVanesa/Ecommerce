@@ -616,3 +616,7 @@ footer img{
    margin-bottom:10px;
 }
 
+#shopContent{
+    display:flex;
+    justify-content:space-evenly;
+}
